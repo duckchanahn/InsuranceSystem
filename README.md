@@ -5,5 +5,16 @@
   Tomcat : 8.5.63
 ***
 
-- Spring MVC (Jsp, Ajax)
-- AWS (Jenkins, Tomcat)
+# <center>Myongji University Team Project</center>
+
+### Petcares Web Service
+
+* Language: Java 
+
+* IDE: Eclipse
+
+* Framework: Spring MVC, Mybatis
+
+* DBMS: MySQL(RDBMS)
+
+* Server: Amazon Web Service
