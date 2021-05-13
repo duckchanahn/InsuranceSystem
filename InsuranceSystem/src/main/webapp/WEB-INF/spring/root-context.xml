@@ -6,13 +6,21 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url"
-value="jdbc:mysql://database-1.cepksxoogp5o.ap-northeast-1.rds.amazonaws.com:3306/insurancedb?useSSL=false&amp;serverTimezone=UTC" />
-		<property name="username" value="insuranceadmin" />
-		<property name="password" value="asdf4698" />
-	</bean>
+<!-- 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"> -->
+<!-- 		<property name="driverClassName" value="com.mysql.jdbc.Driver" /> -->
+<!-- 		<property name="url" -->
+<!-- value="jdbc:mysql://db-sang-lunch.cdjhmqsvlizr.us-east-2.rds.amazonaws.com:3306/insurancedb?useSSL=false&amp;serverTimezone=UTC" /> -->
+<!-- 		<property name="username" value="insuranceadmin" /> -->
+<!-- 		<property name="password" value="asdf4698" /> -->
+<!-- 	</bean> -->
+
+       <!-- MySQL dataSource -->
+        <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+            <property name="driverClassName" value="${spring.datasource.driverClassName}"/>
+            <property name="url" value="${spring.datasource.url}"/>
+            <property name="username" value="${spring.datasource.username}"/>
+            <property name="password" value="${spring.datasource.password}"/>
+        </bean>
 	<!-- database-1.cepksxoogp5o.ap-northeast-1.rds.amazonaws.com -->
 	
 	<bean name="template" class="org.springframework.jdbc.core.JdbcTemplate">

@@ -8,7 +8,7 @@
 	<!-- parameterType="java.lang.Integer" -->
 	<!-- where customerID = #{customerID} -->
 	<select id="getAllContract" resultType="com.test.dto.Contract">
-		select * from Contract
+		select * from Contract;
 	</select>
 
 	<select id="showCustomerContract"

@@ -6,8 +6,16 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>보험사 시스템로그인</title>
 	<script type="text/javascript">
+	var httpRequest;
 		function loginFunction(){
-			var loginForm = document.getElementById("loginForm");
+			
+			httpRequest = new XMLHttpRequest();
+			if (!httpRequest) {
+				alert('중복확인 XMLHTTP 인스턴스를 만들 수가 없어요 ㅠㅠ');
+				return false;
+			}
+			httpRequest.onreadystatechange = duplicateCheckCallBack;
+			
 			var id = document.getElementById("userid");
 			var pw = document.getElementById("password");
 			if( !id.value ){
@@ -18,7 +26,27 @@
 				alert("pw를 입력하세요!");
 				return false;
 			}
-			loginForm.submit();
+			
+			httpRequest.open('GET', 'checkLogin?id=' + id.value + "&pw=" + pw.value);
+			httpRequest.send();
+		}
+		
+		function duplicateCheckCallBack() {
+			
+			if (httpRequest.readyState === XMLHttpRequest.DONE) {
+				if (httpRequest.status === 200) {
+					var res = httpRequest.responseText;
+					if(res == "false"){
+						alert("아이디 비밀번호를 확인해주세요");
+//							isAvailable = true;
+					}else{
+						var loginForm = document.getElementById("loginForm");
+						loginForm.submit();
+					}
+				} else {
+					alert('접속 실패');
+				}
+			}
 		}
 		
 		function homeFunction(){

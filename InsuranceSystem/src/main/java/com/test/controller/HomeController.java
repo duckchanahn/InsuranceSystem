@@ -116,6 +116,7 @@ public class HomeController {
 	@RequestMapping(value = "/signUpComplete")
 	public String signUpComplete(@RequestParam HashMap<String, Object> pmap) {
 		customerDAO.signUp(pmap);
+		System.out.println("회원가입 완료 페이지");
 		return "redirect:login";
 	}
 	
@@ -136,6 +137,32 @@ public class HomeController {
 			res = res + "ssn ";
 		}
 		return res; // Ajax
+	}
+	
+	@RequestMapping(value = "/checkLogin") // 중복확인 (ID, 주민등록번호)
+	@ResponseBody
+	public String checkLogin(Model model, @RequestParam HashMap<String, Object> amap) {
+		String res = "";
+		String id = (String) amap.get("id");
+		String pw = (String) amap.get("pw");
+		
+		System.out.println("id ajax => " + id);
+		System.out.println("pw ajax => " + pw);
+		
+		List<Customer> customersByID = this.customerDAO.showCustomerByLoginID(id);
+		
+		
+		if(customersByID.size() > 0) {
+			if(this.customerDAO.checkCustomerByPw(id, pw)) {
+				res = "";
+			} else {
+				res = "false";
+			}
+		} else {
+			res = "false";
+		}
+		
+		return res;
 	}
 	
 }

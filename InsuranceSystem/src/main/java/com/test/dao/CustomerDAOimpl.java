@@ -101,4 +101,15 @@ public class CustomerDAOimpl implements CustomerDAO {
 		return this.sqlSession.selectList("showCustomerByLoginID", id);
 	}
 	
+	@Override
+	public boolean checkCustomerByPw(String id, String pw) {
+		
+		if (pw.equals(this.sqlSession.selectOne("checkCustomerByPw", id))) {
+			return true;
+		} else {
+			return false;
+		}
+//		return this.sqlSession.selectOne("checkCustomerByPw", id);
+	}
+	
 }

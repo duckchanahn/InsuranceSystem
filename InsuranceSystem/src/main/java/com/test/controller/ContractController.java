@@ -96,6 +96,7 @@ public class ContractController {
 		List<Integer> insuranceID = new ArrayList<Integer>();
 		List<String> insuranceType = new ArrayList<String>();
 		for(Contract contract : allContract) {
+			System.out.println("contract.getInsuranceType ==> " + contract.getInsuranceType());
 			allContractManagerID.add(contract.getContractManagerID());
 			recipientID.add(contract.getRecipientID());
 			insuranceID.add(contract.getInsuranceID());
@@ -109,6 +110,8 @@ public class ContractController {
 		List<String> recipientName = recipientDAO.showRecipientName(recipientID);
 		
 		List<String> insuranceName = new ArrayList<String>();
+		System.out.println("insuranceID.size ==> " + insuranceID.size());
+		System.out.println("insuranceType.size ==> " +insuranceType.size());
 		for(int i = 0; i < insuranceID.size(); i++) {
 			int proposalID = 0;
 			if(insuranceType.get(i).equals("fire")) {

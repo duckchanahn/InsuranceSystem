@@ -76,5 +76,7 @@ public interface CustomerDAO {
 	public int signup(Customer customer);
 	
 	public List<Customer> showCustomerByLoginID(String id);
+	
+	public boolean checkCustomerByPw(String id, String pw);
 
 }

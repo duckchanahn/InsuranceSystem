@@ -124,3 +124,6 @@
 
 6월 16, 2020 01:15:56.16 NEW SESSION
 6월 16, 2020 01:15:56.16 [2876:1684:0616/011556.141:ERROR:data_pack.cc(120)] Could not open pak file for writing: 요청한 작업은, 사용자가 매핑한 구역이 열려 있는 상태인 파일에서 수행할 수 없습니다. (0x4C8)
+
+5월 12, 2021 15:13:21.51 NEW SESSION
+5월 12, 2021 15:13:21.51 [8652:13724:0512/151321.486:ERROR:device_event_log_impl.cc(214)] [15:13:21.485] USB: usb_device_handle_win.cc:1054 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)

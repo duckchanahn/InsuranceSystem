@@ -38,7 +38,7 @@
 					<h1 class="page-header">보험 가입 약관</h1>
 				</div>
 				<hr/>
-				<p>약관 내용 blah blah blah ~~</p>
+				<p>약관 내용에 동의하십니까?</p>
 				<form id="theForm">
 					<c:forEach items="${rmap}" var="one" varStatus="status">
 						<input type="hidden" name="${one.key}" value="${one.value}">

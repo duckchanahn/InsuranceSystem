@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="new"/>
+		<item key="selection" value="insuranceType"/>
 		<list key="findhistory">
+			<item value="insuranceType"/>
+			<item value="allInsurance"/>
 			<item value="new"/>
 			<item value="getAllContract"/>
 			<item value="getID"/>
@@ -21,8 +23,6 @@
 			<item value="case &quot;VehicleInsurance&quot;:"/>
 			<item value="case &quot;InjuryInsurance&quot;:"/>
 			<item value="case &quot;FireInsurance&quot;:"/>
-			<item value="VehicleInsurance"/>
-			<item value="InjuryInsurance"/>
 		</list>
 		<list key="replacehistory">
 			<item value="case &quot;vehicle&quot;:"/>
