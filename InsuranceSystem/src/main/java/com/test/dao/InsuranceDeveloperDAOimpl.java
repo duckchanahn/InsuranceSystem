@@ -45,5 +45,13 @@ public class InsuranceDeveloperDAOimpl implements InsuranceDeveloperDAO {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	public boolean checkByPw(String id, String pw) {
+		if(this.sqlSession.selectOne("developerCheckByPw", id).equals(pw)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 }

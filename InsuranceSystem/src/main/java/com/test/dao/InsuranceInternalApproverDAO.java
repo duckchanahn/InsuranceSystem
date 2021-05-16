@@ -29,5 +29,7 @@ public interface InsuranceInternalApproverDAO {
 	public int internalApprovePropoal(Proposal proposal);
 	
 	public List<InsuranceInternalApprover> login(Map<String, String> loginInfo);
+	
+	public boolean checkByPw(String id, String pw);
 
 }

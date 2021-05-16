@@ -9,6 +9,17 @@
 	var httpRequest;
 		function loginFunction(){
 			
+			var radio = document.getElementsByName("whoLogin");
+			var type = "";
+			
+			for(i=0; i<radio.length; i++){
+            	if(radio[i].checked){
+                	type = radio[i].value;
+                	break;
+                }
+			}
+			
+			
 			httpRequest = new XMLHttpRequest();
 			if (!httpRequest) {
 				alert('중복확인 XMLHTTP 인스턴스를 만들 수가 없어요 ㅠㅠ');
@@ -27,7 +38,7 @@
 				return false;
 			}
 			
-			httpRequest.open('GET', 'checkLogin?id=' + id.value + "&pw=" + pw.value);
+			httpRequest.open('GET', 'checkLogin?id=' + id.value + "&pw=" + pw.value + "&type=" + type);
 			httpRequest.send();
 		}
 		

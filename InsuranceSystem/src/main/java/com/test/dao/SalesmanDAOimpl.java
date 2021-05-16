@@ -31,5 +31,13 @@ public class SalesmanDAOimpl implements SalesmanDAO {
 		// TODO Auto-generated method stub
 		return this.sqlSession.selectList("salesmanLogin", loginInfo);
 	}
+	
+	public boolean checkByPw(String id, String pw) {
+		if(this.sqlSession.selectOne("salesCheckByPw", id).equals(pw)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 }

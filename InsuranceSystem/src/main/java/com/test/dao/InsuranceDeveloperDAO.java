@@ -27,5 +27,7 @@ public interface InsuranceDeveloperDAO {
 	 * @param ���谳����
 	 */
 	public int registerInsuranceDeveloperTeamOnProposal(InsuranceDeveloperTeam insuranceDeveloperTeam);
+	
+	public boolean checkByPw(String id, String pw);
 
 }

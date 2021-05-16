@@ -16,4 +16,6 @@ public interface SalesmanDAO {
 	
 	public List<Salesman> login(Map<String, String> loginInfo);
 	
+	public boolean checkByPw(String id, String pw);
+	
 }

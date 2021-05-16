@@ -26,3 +26,17 @@
 0:0:0:0:0:0:0:1 - - [13/May/2021:18:24:01 +0900] "GET /hello/checkLogin?id=cus1&pw=cus1 HTTP/1.1" 200 -
 0:0:0:0:0:0:0:1 - - [13/May/2021:18:24:03 +0900] "POST /hello/loginDo HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [13/May/2021:18:24:03 +0900] "GET /hello/index HTTP/1.1" 200 17628
+127.0.0.1 - - [13/May/2021:18:33:03 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [13/May/2021:18:33:03 +0900] "GET /hello/ HTTP/1.1" 200 17690
+0:0:0:0:0:0:0:1 - - [13/May/2021:18:38:14 +0900] "GET /hello/allInsurance HTTP/1.1" 200 5088
+0:0:0:0:0:0:0:1 - - [13/May/2021:18:39:33 +0900] "POST /hello/insuranceDetail?whichInsurance=injury&insuranceID=1 HTTP/1.1" 200 10017
+0:0:0:0:0:0:0:1 - - [13/May/2021:18:39:33 +0900] "GET /hello/img/table_mid.gif HTTP/1.1" 404 -
+0:0:0:0:0:0:0:1 - - [13/May/2021:18:39:33 +0900] "GET /hello/img/table_left.gif HTTP/1.1" 404 -
+0:0:0:0:0:0:0:1 - - [13/May/2021:18:39:33 +0900] "GET /hello/img/table_right.gif HTTP/1.1" 404 -
+0:0:0:0:0:0:0:1 - - [13/May/2021:18:40:19 +0900] "GET /hello/allInsurance HTTP/1.1" 200 5088
+0:0:0:0:0:0:0:1 - - [13/May/2021:18:40:30 +0900] "GET /hello/ HTTP/1.1" 200 17690
+0:0:0:0:0:0:0:1 - - [13/May/2021:18:42:01 +0900] "GET /hello/login HTTP/1.1" 200 2362
+0:0:0:0:0:0:0:1 - - [13/May/2021:18:42:11 +0900] "GET /hello/checkLogin?id=cus1&pw=cus1 HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [13/May/2021:18:42:13 +0900] "POST /hello/loginDo HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [13/May/2021:18:42:13 +0900] "GET /hello/index HTTP/1.1" 200 17628
+0:0:0:0:0:0:0:1 - - [13/May/2021:18:42:33 +0900] "GET /hello/allContract HTTP/1.1" 200 3077

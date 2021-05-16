@@ -14,4 +14,10 @@
 		and pw = #{pw}
 	</select>
 	
+	<select id="developerCheckByPw" parameterType="java.lang.String"
+		resultType="java.lang.String">
+		select pw from InsuranceDeveloper
+		where insuranceDeveloperID = #{id}
+	</select>
+	
 </mapper>

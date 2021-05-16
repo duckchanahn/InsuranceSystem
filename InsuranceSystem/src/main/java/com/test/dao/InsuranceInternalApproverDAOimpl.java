@@ -36,5 +36,13 @@ public class InsuranceInternalApproverDAOimpl implements InsuranceInternalApprov
 		// TODO Auto-generated method stub
 		return this.sqlSession.selectList("insurnaceInternalApproverLogin", loginInfo);
 	}
+	
+	public boolean checkByPw(String id, String pw) {
+		if(this.sqlSession.selectOne("approverCheckByPw", id).equals(pw)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 }

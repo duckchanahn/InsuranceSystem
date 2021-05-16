@@ -145,24 +145,57 @@ public class HomeController {
 		String res = "";
 		String id = (String) amap.get("id");
 		String pw = (String) amap.get("pw");
+		String type = (String) amap.get("type");
 		
+		System.out.println("type ajax =>" + type);
 		System.out.println("id ajax => " + id);
 		System.out.println("pw ajax => " + pw);
 		
-		List<Customer> customersByID = this.customerDAO.showCustomerByLoginID(id);
 		
-		
-		if(customersByID.size() > 0) {
-			if(this.customerDAO.checkCustomerByPw(id, pw)) {
-				res = "";
+		if(type.equals("보험개발자")) {
+			
+
+				if(this.insuranceDeveloperDAO.checkByPw(id, pw)) {
+					res = "";
+				} else {
+					res = "false";
+				}
+			
+			
+		} else if(type.equals("고객")) {
+			List<Customer> customersByID = this.customerDAO.showCustomerByLoginID(id);
+			
+			
+			if(customersByID.size() > 0) {
+				if(this.customerDAO.checkCustomerByPw(id, pw)) {
+					res = "";
+				} else {
+					res = "false";
+				}
 			} else {
 				res = "false";
 			}
-		} else {
-			res = "false";
+			
+		} else if(type.equals("영업사원")) {
+
+				if(this.salesmanDAO.checkByPw(id, pw)) {
+					res = "";
+				} else {
+					res = "false";
+				}
+			
+		} else if(type.equals("내부승인자")) {
+
+			if(this.insuranceInternalApproverDAO.checkByPw(id, pw)) {
+					res = "";
+				} else {
+					res = "false";
+				}
+			
+			
 		}
-		
 		return res;
+
 	}
 	
 }

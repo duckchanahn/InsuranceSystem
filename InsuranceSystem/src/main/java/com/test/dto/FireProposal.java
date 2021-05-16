@@ -13,8 +13,6 @@ public class FireProposal implements Proposal { // extends Proposal
 	private float industryFacilityRate;
 	private float agriculturalFacilityRate;
 	private float chemistryFacilityRate;
-	// facilityBusinessType
-	// facilityMaterialType
 	private float woodenHouseRate; // 1.3
 	private float koreanHouseRate; // 1.1
 	private float westernHouseRate; // 1.0
