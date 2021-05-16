@@ -5,7 +5,7 @@
   Tomcat : 8.5.63
 ***
 
-### Petcares Web Service
+### Insurance Web Service
 
 * Language: Java 
 
